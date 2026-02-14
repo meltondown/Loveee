@@ -1,0 +1,442 @@
+:root {
+    --intro-border: #FFB3C1;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #F7CAD0;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+body.no-scroll {
+    overflow: hidden;
+    height: 100vh;
+}
+
+.intro {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.door {
+    height: 100vh;
+    width: 50vw;
+    box-sizing: border-box;
+}
+
+.door:first-child {
+    background: 
+        radial-gradient(circle at 100% 45%, 
+            transparent 79.5px, 
+            var(--intro-border) 80px, 
+            var(--intro-border) 89px, 
+            transparent 89.5px),
+        linear-gradient(to left, var(--intro-border) 10px, transparent 10px) 100% 0% / 100% 100% no-repeat,
+        linear-gradient(to right, var(--intro-border) 30px, transparent 30px),
+        linear-gradient(to bottom, var(--intro-border) 30px, transparent 30px),
+        linear-gradient(to top, var(--intro-border) 30px, transparent 30px),
+        #FFF0F3;
+    border: none;
+    -webkit-mask-image: radial-gradient(circle at 100% 45%, transparent 79px, white 80px);
+    mask-image: radial-gradient(circle at 100% 45%, transparent 79px, white 80px);
+}
+
+.door:nth-child(2) {
+    background: 
+        radial-gradient(circle at 0% 45%, 
+            transparent 79.5px, 
+            var(--intro-border) 80px, 
+            var(--intro-border) 89px, 
+            transparent 89.5px),
+        linear-gradient(to right, var(--intro-border) 10px, transparent 10px) 0% 0% / 100% 100% no-repeat,
+        linear-gradient(to left, var(--intro-border) 30px, transparent 30px),
+        linear-gradient(to bottom, var(--intro-border) 30px, transparent 30px),
+        linear-gradient(to top, var(--intro-border) 30px, transparent 30px),
+        #FFF0F3;
+    border: none;
+    -webkit-mask-image: radial-gradient(circle at 0% 45%, transparent 79px, white 80px);
+    mask-image: radial-gradient(circle at 0% 45%, transparent 79px, white 80px);
+}
+
+.circle-c {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 150px;
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    cursor: pointer;
+}
+
+.circle {
+    height: 100%;
+    width: 100%;
+    fill: #FFB3C1;
+    filter: drop-shadow(0 4px 8px #E2A2B1);
+    position: absolute;
+    z-index: 10;
+}
+
+.heart-c {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 170px;
+    width: 170px;
+    z-index: 9;
+}
+
+.heart {
+    height: 100%;
+    width: 100%;
+    fill: #ffaec0;
+    fill-opacity: 0;
+    stroke: #ffaec0;
+    stroke-width: 1px;
+    stroke-dasharray: 70.5;
+    stroke-dashoffset: 70.5;
+    stroke-linecap: round;
+    filter: drop-shadow(0 0 4px #db90a0);
+    z-index: 9;
+}
+
+.bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-image: url('bg.png');
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    opacity: 0;
+}
+
+.intro-text-h {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: 0;
+    color: #5E3A41;
+    font-family: "Dancing Script", cursive;
+    font-style: normal;
+    font-size: 3rem;
+    letter-spacing: 2px;
+    opacity: 0;
+    z-index: 5;
+    display: block;
+    text-align: center;
+}
+
+.intro-text-h .line {
+    display: block;
+}
+
+.intro-text-h .line:first-child {
+    font-weight: 500;
+}
+
+.intro-text-h .line:last-child {
+    font-weight: 700;
+}
+
+.scroll-down {
+    position: absolute;
+    bottom: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.3rem;
+    font-family: "Montserrat", sans-serif;
+    white-space: nowrap;
+    font-weight: 700;
+    color: #4A202C;
+    opacity: 0;
+    letter-spacing: 2px;
+}
+
+.gallery-section {
+    min-height: 100vh;
+    width: 100vw;
+    background-image: url('bg2.png');
+    background-size: cover;
+    background-position: center;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.caption-card {
+    height: 20vh;
+    width: 90%;
+    max-width: 600px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px) saturate(150%);
+    border-radius: 30px;
+    position: absolute;
+    top: 30%;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 5;
+}
+
+#rose {
+    height: 400px;
+    position: absolute;
+    top: -30px;
+    transform: rotate(30deg);
+    opacity: 1;
+    z-index: 4;
+}
+
+.caption {
+    font-family: "Dancing Script", cursive;
+    font-size: 50px;
+    margin-bottom: 0;
+    font-weight: 700;
+    color: #4A202C;
+    text-shadow: 0 0 15px rgba(217, 98, 119, 0.4);
+}
+
+.sub-cap {
+    margin-top: 0;
+    font-family: "Montserrat", sans-serif;
+    color: #8E5B66;
+    text-shadow: 0 0 8px rgba(217, 98, 119, 0.3);
+    font-weight: 600;
+    letter-spacing: 3px;
+}
+
+.char1, .char2 {
+    display: inline-block;
+    white-space: pre;
+}
+
+.gallery {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+}
+
+.pics {
+    position: absolute;
+    height: 40vh;
+    width: 90vw;
+    max-width: 500px;
+    object-fit: cover;
+    object-position: top;
+    background-color: white;
+    padding: 15px 15px 60px 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    left: 50%;
+    bottom: 5vh;
+    transform: translateX(-50%);
+}
+
+/* Valentine Proposal Page */
+.yes-no {
+    background: linear-gradient(180deg, #2D161B 0%, #1a0b0e 100%);
+    padding: 40px 20px;
+    height: 100vh;
+    width: 100vw;
+    display: none;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+}
+
+.text {
+    height: 45vh;
+    width: 90vw;
+    max-width: 900px;
+    display: flex;
+    color: #FFF0F3;
+    background-color: rgba(82, 79, 79, 0.2);
+    backdrop-filter: blur(12px);
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 179, 193, 0.2);
+}
+
+.text p {
+    text-align: center;
+    font-size: 3.5vh;
+    color: #FFB3C1;
+    line-height: 1.8;
+    font-family: "Shadows Into Light", cursive;
+    text-shadow: 0 0 20px rgba(255, 179, 193, 0.3);
+    margin: 0;
+}
+
+.forever {
+    font-family: "Barrio", system-ui;
+    color: #5E3A41;
+    -webkit-text-stroke: 0.5px #FFB3C1;
+    font-size: 4vh;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.text2 {
+    color: #FFB3C1;
+    font-family: "Bebas Neue", sans-serif;
+    letter-spacing: 4px;
+    font-weight: bold;
+    font-size: 5.5vh;
+    text-shadow: 0 0 25px rgba(255, 179, 193, 0.8),
+                 0 0 50px rgba(255, 179, 193, 0.5);
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    white-space: nowrap;
+    transform: translate(-50%, -50%);
+    margin: 0;
+}
+
+.buttons {
+    position: absolute;
+    bottom: 25%;
+    display: flex;
+    gap: 40px;
+}
+
+.text3 {
+    position: absolute;
+    bottom: 8vh;
+    font-size: 3.5vh;
+    font-family: "Space Grotesk", sans-serif;
+    color: #FFB3C1;
+    text-align: center;
+    max-width: 90%;
+    line-height: 1.6;
+    margin: 0;
+    text-shadow: 0 0 15px rgba(255, 179, 193, 0.5);
+}
+
+button {
+    border: none;
+    color: #2D161B;
+    background: linear-gradient(135deg, #FFB3C1 0%, #db90a0 100%);
+    padding: 15px 50px;
+    border-radius: 50px;
+    font-size: 2.5rem;
+    font-weight: bold;
+    font-family: "Montserrat", sans-serif;
+    letter-spacing: 3px;
+    cursor: pointer;
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 40px rgba(255, 179, 193, 0.5);
+}
+
+button:active {
+    transform: scale(0.95);
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+.glow-point {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, rgba(255, 179, 193, 0.2) 0%, transparent 70%);
+    border-radius: 50%;
+    filter: blur(30px);
+    z-index: 1;
+    animation: float 8s infinite ease-in-out;
+    pointer-events: none;
+}
+
+.glow-point:nth-child(2) {
+    animation-delay: 2s;
+    animation-duration: 10s;
+}
+
+.glow-point:nth-child(3) {
+    animation-delay: 4s;
+    animation-duration: 12s;
+}
+
+@keyframes float {
+    0%, 100% { 
+        transform: translateY(0) scale(1);
+        opacity: 0.6;
+    }
+    50% { 
+        transform: translateY(-30px) scale(1.1);
+        opacity: 0.8;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .text {
+        height: auto;
+        min-height: 40vh;
+        padding: 25px;
+    }
+    
+    .text p {
+        font-size: 2.5vh;
+    }
+    
+    .forever {
+        font-size: 3vh;
+    }
+    
+    .text2 {
+        font-size: 4.5vh;
+    }
+    
+    .buttons {
+        flex-direction: column;
+        gap: 20px;
+        bottom: 20%;
+    }
+    
+    button {
+        font-size: 1.8rem;
+        padding: 12px 40px;
+    }
+    
+    .text3 {
+        font-size: 2.5vh;
+        bottom: 5vh;
+    }
+}
