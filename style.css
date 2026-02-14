@@ -250,7 +250,7 @@ body.no-scroll {
     position: absolute;
     height: 40vh;
     width: 90vw;
-    max-width: 100px;
+    max-width: 500px;
     object-fit: cover;
     object-position: top;
     background-color: white;
@@ -441,3 +441,4 @@ button:active {
     }
 
 }
+
